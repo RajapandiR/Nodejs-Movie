@@ -1,0 +1,15 @@
+# Optional npm cache directory
+.npm
+
+
+
+# Dependency directory
+node_modules
+bower_components
+
+# Editors
+.idea
+.vscode
+*.iml
+modules.xml
+*.ipr
