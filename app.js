@@ -7,7 +7,7 @@ import routers from './src/routers'
 
 // import cors from 'cors';
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 const app = express()
 
 app.use(bodyParser.json())
@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(cookieParser())
 
 
-mongoose.connect("mongodb://localhost:27017/movie", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/movie", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   
