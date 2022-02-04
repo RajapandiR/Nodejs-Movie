@@ -1,27 +1,27 @@
 import User from '../models/user_model';
 
 class UserController {
-    // static  async getUser(req, res, next) {
-    //     try{
-    //          User.find(function(err, result){
-    //             if(err)
-    //                 console.log("Error", err);
-    //             if(result){
-    //                 const response = {
-    //                     "statusCode": 200,
-    //                     "message": "Data",
-    //                     "data": result
-    //                 }
-    //                 res.send(response)
-    //             }
-    //             else
-    //                 res.json({message: err});
-    //         })
+    static  async getUser(req, res, next) {
+        try{
+             User.find(function(err, result){
+                if(err)
+                    console.log("Error", err);
+                if(result){
+                    const response = {
+                        "statusCode": 200,
+                        "message": "Data",
+                        "data": result
+                    }
+                    res.send(response)
+                }
+                else
+                    res.json({message: err});
+            })
 
-    //     }catch(err){
-    //         console.log("Error", err);
-    //     }
-    // }
+        }catch(err){
+            console.log("Error", err);
+        }
+    }
 
     
     static async postUser(req, res,next) {

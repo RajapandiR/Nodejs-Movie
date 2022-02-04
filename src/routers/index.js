@@ -12,7 +12,7 @@ router.route('/login')
     .get(AuthController.logout)
 
 router.route('/user')
-    // .get(UserController.getUser)
+    .get(UserController.getUser)
     .post(UserController.postUser)
 
 router.route('/movie')
