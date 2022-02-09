@@ -12,8 +12,8 @@ function sendEmail1(req, token, user, subject= ""){
         port: 587,
         secure: false,
         auth: {
-            user: config.email,
-            pass: config.pass
+            user: process.env.email,
+            pass: process.env.pass
         },
       newline: 'windows',
       tls : true,
