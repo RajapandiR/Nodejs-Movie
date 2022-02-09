@@ -4,9 +4,10 @@ import Bcrypt from '../utils/bcrypt';
 const userSchema = mongoose.Schema({
     
     email: {type: String},
-    password: { type: String}
+    password: { type: String},
+    resetPasswordToken: { type: String},
+    resetPasswordExpires: { type: Date},
 }, {timestamps: true});
-
 
 
 userSchema.set('toJSON', {

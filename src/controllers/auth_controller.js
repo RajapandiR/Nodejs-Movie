@@ -11,7 +11,6 @@ class AuthController{
        
         try{
            
-           
             var userData;
             if(body.email)
                 userData = await User.findOne({email: body.email })
