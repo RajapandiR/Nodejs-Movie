@@ -27,5 +27,5 @@ app.get('/', (req, res) => {
 })
 app.use('/api', routers);
 
-
+console.log("port", port);
 app.listen(port, () => console.log(`Server start on ${port}`));
